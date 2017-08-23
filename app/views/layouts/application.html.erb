@@ -12,7 +12,13 @@
 
    <p class="notice"><%= notice %></p>
    <p class="alert"><%= alert %></p>
-   
+
+   <p><bold><%= link_to 'Register', new_user_registration_path %></bold></p>
+   <p><bold><%= link_to 'Log In', new_user_session_path %></bold></p>
+   <p><bold><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></bold></p>
+
+
+
     <%= yield %>
   </body>
 </html>
