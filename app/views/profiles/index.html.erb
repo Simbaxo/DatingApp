@@ -1,1 +1,5 @@
 <h1>Index of Profiles</h1>
+
+<% @profiles.each do |p| %>
+	<p><%= link_to p.nickname, profile_path(p) %></p>
+<% end %>

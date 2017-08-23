@@ -1,0 +1,19 @@
+<h1>Create New Dating Profile</h1>
+
+<%= form_for(@profile) do |p| %>
+	<%= p.label :nickname %>
+	<%= p.text_field :nickname %>
+	<%= p.label :name %>
+	<%= p.text_field :name %>
+	<%= p.label :biography %>
+	<%= p.text_area :biography %>
+	<%= p.label :gender %>
+	<%= p.text_field :gender %>
+	<%= p.label :age %>
+	<%= p.text_field :age %>
+	<%= p.label :email %>
+	<%= p.text_field :email %>
+	<%= p.label :hobbies %>
+	<%= p.text_area :hobbies %>
+	<%= p.submit %>
+<% end %>
