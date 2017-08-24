@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>DatingApp</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>DatingApp</title>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<body>
+
+	<%= render 'layouts/header' %>
 
   <body>
 
@@ -22,7 +25,11 @@
    
 
 
-
+ <div class="container">
     <%= yield %>
-  </body>
+    <%= render 'layouts/footer' %>
+ </div>
+
+</body>
+
 </html>
