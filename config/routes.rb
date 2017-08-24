@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   resources :profiles
   get '/signup', to: 'profiles#new'
   get '/about', to: 'pages#about'
