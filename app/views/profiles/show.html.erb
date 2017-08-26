@@ -35,6 +35,11 @@
   <%= @profile.email %>
 </p>
 
+<p>
+  <strong>Picture</strong>
+  <%= image_tag profile.picture.url if profile.picture? %>
+</p>
+
 
  <%= link_to 'Homepage', root_path %>
 
