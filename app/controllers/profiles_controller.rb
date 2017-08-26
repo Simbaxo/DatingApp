@@ -31,11 +31,14 @@ class ProfilesController < ApplicationController
   def delete
   end
 
+  
+
+
 
   private
 
   def profile_params
-    params.require(:profile).permit(:biography, :nickname, :name, :age, :hobbies, :email, :gender)
+    params.require(:profile).permit(:biography, :nickname, :name, :age, :hobbies, :email, :gender, :picture)
   end
 
 
