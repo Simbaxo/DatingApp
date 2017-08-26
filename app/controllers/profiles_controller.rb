@@ -31,6 +31,9 @@ class ProfilesController < ApplicationController
   def delete
   end
 
+  
+
+
 
   private
 

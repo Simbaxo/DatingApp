@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Home</title>
-</head>
-
-<body>
 <div class="center jumbotron">
 	<h1>Welcome to the Dating App</h1>
 	<h2>
@@ -15,6 +6,8 @@
 
 	<%= link_to "Sign Up Now!", signup_path, class: 'btn btn-lg btn-primary' %>
 </div>
-</body>
 
-</html>
+<div>
+  <%= Profile.last.name %>
+
+</div>
