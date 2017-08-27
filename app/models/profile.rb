@@ -1,12 +1,12 @@
 class Profile < ApplicationRecord
-	mount_uploader :picture, PictureUploader
-	validate :picture_size
-
-	private
-	# Validates the size of an uploaded picture.
-	def picture_size
-		if picture.size > 5.megabytes
-			errors.add(:picture, "should be less than 5MB")
-		end
-	end
+	mount_uploader :avatar, AvatarUploader
+ 
+  # User Avatar Validation
+  validates_integrity_of  :avatar
+  validates_processing_of :avatar
+ 
+  private
+    def avatar_size_validation
+      errors[:avatar] << "should be less than 500KB" if avatar.size > 0.5.megabytes
+    end
 end

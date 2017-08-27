@@ -15,17 +15,8 @@
 	<%= p.text_field :email %>
 	<%= p.label :hobbies %>
 	<%= p.text_area :hobbies %>
+	<%= p.label :avatar %>
+  <%= p.file_field :avatar %>
+  <%= p.hidden_field :avatar_cache %>
 	<%= p.submit %>
-	<span class="picture"
-	<%= p.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
-	</span>
 <% end %>
-
-<script type="text/javascript">
-  $('#profile_picture').bind('change', function() {
-    var size_in_megabytes = this.files[0].size/1024/1024;
-    if (size_in_megabytes > 5) {
-      alert('Maximum file size is 5MB. Please choose a smaller file.');
-    }
-  });
-</script>
